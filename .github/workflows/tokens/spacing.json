@@ -1,0 +1,18 @@
+{
+  "spacing": {
+    "xs": { "value": "4px" },
+    "sm": { "value": "8px" },
+    "md": { "value": "16px" },
+    "lg": { "value": "24px" },
+    "xl": { "value": "32px" }
+  }
+}
+```
+
+---
+
+### **Fichier 5: `tokens/typography.json`**
+
+**Nom:**
+```
+tokens/typography.json

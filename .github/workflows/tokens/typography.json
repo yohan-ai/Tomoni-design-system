@@ -1,0 +1,24 @@
+{
+  "fontSize": {
+    "xs": { "value": "12px" },
+    "sm": { "value": "14px" },
+    "base": { "value": "16px" },
+    "lg": { "value": "18px" }
+  },
+  "fontWeight": {
+    "regular": { "value": "400" },
+    "medium": { "value": "500" },
+    "bold": { "value": "700" }
+  }
+}
+```
+
+---
+
+## ⚙️ Les fichiers de configuration
+
+### **Fichier 6: `package.json`**
+
+**Nom:**
+```
+package.json

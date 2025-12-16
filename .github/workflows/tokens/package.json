@@ -1,0 +1,30 @@
+{
+  "name": "tomoni-design-system",
+  "version": "1.0.0",
+  "description": "Tomoni Design System",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build:tokens": "style-dictionary build"
+  },
+  "devDependencies": {
+    "@storybook/react": "^8.0.0",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-docs": "^8.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@types/node": "^20.0.0",
+    "style-dictionary": "^4.0.0"
+  }
+}
+```
+
+---
+
+### **Fichier 7: `style-dictionary.config.js`**
+
+**Nom:**
+```
+style-dictionary.config.js

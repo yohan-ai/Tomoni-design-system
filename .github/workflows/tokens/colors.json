@@ -1,0 +1,23 @@
+{
+  "color": {
+    "primary": {
+      "50": { "value": "#f0f9ff" },
+      "100": { "value": "#e0f2fe" },
+      "500": { "value": "#0ea5e9" },
+      "900": { "value": "#0c2d6b" }
+    },
+    "neutral": {
+      "50": { "value": "#fafafa" },
+      "900": { "value": "#0a0a0a" }
+    }
+  }
+}
+```
+
+---
+
+### **Fichier 4: `tokens/spacing.json`**
+
+**Nom:**
+```
+tokens/spacing.json

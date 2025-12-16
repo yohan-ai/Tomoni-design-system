@@ -1,0 +1,64 @@
+name: Sync Figma Tokens
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build tokens CSS/TS
+        run: npm run build:tokens
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push if changed
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add tokens/
+          git commit -m "🎨 Sync tokens from Figma"
+          git push
+```
+
+### Étape 3: Sauvegarder (Commit)
+
+En bas à droite, clique sur le bouton vert **"Commit changes..."**
+
+Une popup va apparaître:
+- Laisse le message par défaut
+- Clique sur **"Commit changes"**
+
+✅ **Le premier fichier est créé!**
+
+---
+
+## 🔄 Maintenant le 2ème fichier
+
+Refais la **même procédure** mais avec:
+
+### Nom du fichier:
+```
+.github/workflows/deploy-storybook.yml
